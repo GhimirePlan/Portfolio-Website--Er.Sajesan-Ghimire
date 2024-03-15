@@ -1075,15 +1075,15 @@ img {
   width: 250px;
   overflow: hidden;
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 70%;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
   background: linear-gradient(45deg, #1d3ec4, #1f8e45);
 }
 .tcontainer:hover{
-  height: 470px;
-  width: 350px;
-  border-radius: 5px;
+  height: 670px;
+  width: 330px;
+  border-radius: 50px;
   box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
 }
 .tcontainer .twrapper img{
@@ -1295,6 +1295,15 @@ img {
     animation-duration: 11s;
 }
 
+.linkedin {
+    bottom: 5rem;
+    left: 500px;
+    align-items: center;
+    display: -webkit-box;
+    row-gap: .5rem;
+}
+
+
 
 
 @keyframes animate {
@@ -1406,6 +1415,8 @@ img {
     object-fit: cover;
     transition: 1s;
 }
+
+
 
 /* popup */
 
