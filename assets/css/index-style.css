@@ -135,6 +135,13 @@ img {
     margin-bottom: 2rem;
 }
 
+.section__title1 {
+    text-align: center;
+    margin-top: -40px;
+    font-size: 12px;
+    color: #20223d
+    margin-bottom: 0rem;
+}
 .section__subtitle {
     display: block;
     font-size: var(--smaller-font-size);
@@ -662,6 +669,59 @@ img {
 
 .swiper-pagination-bullet-active {
     background-color: var(--first-color);
+}
+
+/* Basic Swiper Styling (if not included already) */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    background-color: var(--container-color);
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; /* Can be adjusted */
+    max-height: 70%; /* Ensure modal content fits and scrolls */
+    overflow-y: auto; /* Enable scrolling within the modal content */
+}
+
+/* Close button (X) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*=============== Contact ===============*/
@@ -1385,6 +1445,115 @@ img {
 }
 
 }
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.large-image {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+}
+
+/* Arrows */
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Description at the bottom */
+.image-description {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.index {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+}
+.popup.active {
+    opacity: 1; /* Fully visible when active */
+    visibility: visible; /* Set visibility to visible when active */
+}
+.popup {
+    background: rgba(0, 0, 0, 0.8); /* Fallback background color */
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+}
+/* Styling for single initial image */
+.gallery-image {
+    
+    text-align: center;
+}
+.close-btn {
+    position: absolute; /* Positioning it at the top right */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly more opaque on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.close-btn:focus {
+    outline: none; /* Remove default outline */
+}
+.image-description {
+    position: absolute; /* Positioning it absolutely */
+    top: 80%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using transform */
+    color: white; /* Text color */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Optional rounded corners */
+    text-align: center; /* Center text */
+    z-index: 10; /* Ensure it appears above the image */
+}
+
 
 .gallery{
     width: 100%;
